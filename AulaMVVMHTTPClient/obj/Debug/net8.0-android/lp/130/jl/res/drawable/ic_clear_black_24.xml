@@ -1,0 +1,28 @@
+<objectSet>
+            <pattern type="Registry">HKU\.DEFAULT\Software\Microsoft\IdentityCRL\DeviceIdentities\* [*]</pattern>
+          </objectSet>
+        </merge>
+      </rules>
+    </migXml>
+    <supportedComponents>
+      <supportedComponent>
+        <assemblyIdentity name="_" version="1.0.0.0" />
+        <supportedComponentIdentity language="neutral" name="Windows-ID-Connected-Account-Provider-WLIDSvc" processorArchitecture="*" settingsVersionRange="0" xmlns="urn:schemas-microsoft-com:asm.v3" />
+        <migXml xmlns="">
+          <rules context="system">
+            <exclude>
+              <objectSet>
+                <pattern type="Registry">HKLM\Software\Microsoft\IdentityCRL\Environment\* [*]</pattern>
+              </objectSet>
+            </exclude>
+            <merge script="MigXmlHelper.DestinationPriority()">
+              <objectSet>
+                <pattern type="Registry">HKU\.DEFAULT\Software\Microsoft\IdentityCRL\DeviceIdentities\* [*]</pattern>
+              </objectSet>
+            </merge>
+          </rules>
+        </migXml>
+      </supportedComponent>
+    </supportedComponents>
+  </migration>
+  <trustIn

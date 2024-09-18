@@ -1,0 +1,17 @@
+.Res.Resources" />
+      <component name="Microsoft-Windows-COM-ComPlus-Admin-COMREPL.Resources" />
+      <component name="Microsoft-Windows-CommandLineHelp.Resources" />
+      <component name="Microsoft-Windows-CommandPrompt.Resources" />
+      <component name="Microsoft-Windows-Compact.Resources" />
+      <component name="Microsoft-Windows-CSVDE.Resources" />
+      <component name="Microsoft-Windows-DefaultPrinterProvider.Resources" />
+      <component name="Microsoft-Windows-Defrag-CmdLine.Resources" />
+      <component name="Microsoft-Windows-Deployment-Image-Servicing-Management-Core.Resources" />
+      <component name="Microsoft-Windows-Deployment-Image-Servicing-Management-WinProviders-Appx.Resources" />
+      <component name="Microsoft-Windows-Deployment-Image-Servicing-Management-WinProviders-Assoc.Resources" />
+      <component name="Microsoft-Windows-Deployment-Image-Servicing-Management-WinProviders-Msi.Resources" />
+      <component name="microsoft-windows-deployment-image-servicing-management-winproviders-setupplatform.resources" />
+      <component name="Microsoft-Windows-Deployment-Image-Servicing-Management-WinProviders-WinPE.Resources" />
+      <component name="microsoft-windows-deployment-initial-machine-configuration.resources" />
+      <component name="Microsoft-Windows-Deployment-Services-Management-CommandLine.Resources" />
+      <component name="microsoft-windows-deployment-se

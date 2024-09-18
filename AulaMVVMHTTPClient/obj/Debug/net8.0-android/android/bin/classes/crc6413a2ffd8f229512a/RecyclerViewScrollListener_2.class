@@ -1,0 +1,42 @@
+gt;";</font>
+</pre>
+
+<p>When the session is created in session_start( ), the global variable $<b>ADODB_SESS_CONN</b> holds
+the connection object.
+<p>The default name of the table is sessions2. If you want to override it:
+  
+<pre>
+include_once("adodb/session/adodb-session2.php");
+$options['table'] = 'mytablename';
+ADOdb_Session::config($driver, $host, $user, $password, $database,$options);
+session_start();
+</pre>
+
+
+<h3>ADOdb Session Handler Features</h3>
+<ul>
+  <li>Ability to define a notification function that is called when a
+session expires. Typically
+used to detect session logout and release global resources. </li>
+  <li>Optimization of database writes. We crc32 the session data and
+only perform an update
+to the session data if there is a data change. </li>
+  <li>Support for large amounts of session data with CLOBs (see
+adodb-session-clob2.php). Useful
+for Oracle. </li>
+  <li>Support for encrypted session data, see
+adodb-cryptsession2.php. Enabling encryption is simply a matter of
+including adodb-cryptsession2.php instead of adodb-session2.php. </li>
+</ul>
+<h3>Session Handler Files </h3>
+<p>There are 3 session management files that you can use:
+</p>
+<pre>adodb-session2.php        : The default<br>adodb-cryptsession2.php   : Use this if you want to store encrypted session data in the database<br>adodb-session-clob2.php   : Use this if you are storing DATA in clobs and you are NOT using oci8 driver</pre>
+<h2><strong>Usage Examples</strong></h2>
+<p>To force non-persistent connections, call <font color="#004040"><b>Persist</b></font>() first before session_start():
+
+ 
+<pre>
+ <font color="#004040">
+include_once("adodb/session/adodb-session2.php");
+$driver = 'mysql'; $host = 'localhost'; $user =

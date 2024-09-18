@@ -1,0 +1,19 @@
+/categoryMembership>
+  </memberships>
+  <registryKeys>
+    <registryKey keyName="HKEY_LOCAL_MACHINE\Software\Microsoft\IdentityCRL">
+      <securityDescriptor name="IdentityCRL_SDDL" />
+    </registryKey>
+    <registryKey keyName="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wlidsvc">
+      <registryValue name="StateFlags" valueType="REG_DWORD" value="0x00000001" />
+    </registryKey>
+    <registryKey keyName="HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wlidsvc\Parameters">
+      <registryValue name="ServiceDll" valueType="REG_EXPAND_SZ" value="%SystemRoot%\system32\wlidsvc.dll" />
+      <registryValue name="ServiceDllUnloadOnStop" valueType="REG_DWORD" value="0x00000001" />
+      <securityDescriptor name="WRP_KEY_DEFAULT_SDDL" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\AppID\{A6721677-BA21-44E9-9E2A-76466D24D121}">
+      <registryValue name="" valueType="REG_SZ" value="WLIDSvc" />
+      <registryValue name="LocalService" valueType="REG_SZ" value="WLIDSvc" />
+      <securityDescriptor name="WRP_KEY_DEFAULT_SDDL" />
+    </registry

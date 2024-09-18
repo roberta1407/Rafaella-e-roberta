@@ -1,0 +1,13 @@
+dows-Diskpart.Resources" />
+      <component name="Microsoft-Windows-Diskraid.Resources" />
+      <component name="Microsoft-Windows-DNS-Server-DnsCmd.Resources" />
+      <component name="Microsoft-Windows-DNS-Server-Service.Resources" />
+      <component name="Microsoft-Windows-Dot3-Netsh-Helper.Resources" />
+      <component name="Microsoft-Windows-DriverQuery.Resources" />
+      <component name="Microsoft-Windows-Edition-Transmogrifier.Resources" />
+      <component name="Microsoft-Windows-EmergencyManagementServices.Resources" />
+      <component name="Microsoft-Windows-EventCollector.Resources" />
+      <component name="Microsoft-Windows-EventCreate.Resources" />
+      <component name="Microsoft-Windows-EventLog-CommandLine.Resources" />
+      <component name="Microsoft-Windows-Expand.Resources" />
+      <component name="Microsoft-Windows-FailoverClust

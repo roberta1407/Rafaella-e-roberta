@@ -1,0 +1,12 @@
+/07 22:50:01.133, jucheck.exe (PID: 16136, TID: 11496), UpdateJudge.cpp:166 (UpdateJudge::readXml)]
+	TRACE: calculateMatchScore(/java-update-map/mapping[161])=0x0
+[2024/07/07 22:50:01.134, jucheck.exe (PID: 16136, TID: 11496), UpdateJudge.cpp:166 (UpdateJudge::readXml)]
+	TRACE: calculateMatchScore(/java-update-map/mapping[162])=0x0
+[2024/07/07 22:50:01.134, jucheck.exe (PID: 16136, TID: 11496), UpdateJudge.cpp:166 (UpdateJudge::readXml)]
+	TRACE: calculateMatchScore(/java-update-map/mapping[163])=0x0
+[2024/07/07 22:50:01.135, jucheck.exe (PID: 16136, TID: 11496), UpdateJudge.cpp:166 (UpdateJudge::readXml)]
+	TRACE: calculateMatchScore(/java-update-map/mapping[164])=0x0
+[2024/07/07 22:50:01.136, jucheck.exe (PID: 16136, TID: 11496), UpdateJudge.cpp:166 (UpdateJudge::readXml)]
+	TRACE: calculateMatchScore(/java-update-map/mapping[165])=0x0
+[2024/07/07 22:50:01.136, jucheck.exe (PID: 16136, TID: 11496), UpdateJudge.cpp:166 (UpdateJudge::readXml)]
+	T

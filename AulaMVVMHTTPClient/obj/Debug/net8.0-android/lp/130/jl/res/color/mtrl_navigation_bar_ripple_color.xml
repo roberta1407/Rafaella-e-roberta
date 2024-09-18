@@ -1,0 +1,26 @@
+estValue>
+    </asmv2:hash>
+  </file>
+  <file name="HvsiMachinePolicies_ContainerCreate.xml" destinationPath="$(runtime.system32)\HvsiSettingsProviders\" sourceName="HvsiMachinePolicies_ContainerCreate.xml" importPath="$(build.nttree)\hvsi\configurations\" sourcePath=".\">
+    <securityDescriptor name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>XRUZw+D3lm0t07+cYPt0jywqWIpcfE/cMWRFbqIdle0=</dsig:DigestValue>
+    </asmv2:hash>
+  </file>
+  <file name="HvsiMachinePolicies_ContainerRealtime.xml" destinationPath="$(runtime.system32)\HvsiSettingsProviders\" sourceName="HvsiMachinePolicies_ContainerRealtime.xml" importPath="$(build.nttree)\hvsi\configurations\" sourcePath=".\">
+    <securityDescriptor name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KdiI14hoSYjU0iGODUd+Xup51tcWwYQI6Q3/S+qSLLQ=</dsig:DigestValue>
+    </asmv2:hash>
+  </file>
+  <file name="WDATP_ContainerCreate.xml" destinationPath="$(runtime.system32)\HvsiSettingsProviders\" sourceName="WDATP_ContainerCreate.xml" importPath="$(build.nttree)\hvsi\configurations\" sourcePath=".\">
+    <securityDescriptor name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmld

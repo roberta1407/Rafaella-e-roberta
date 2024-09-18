@@ -1,0 +1,9 @@
+ence Virtualization-Agent Driver.event.102.message" value="The Agent Driver trapped the start of process %1 (ID %2)." />
+        <string id="Microsoft-User Experience Virtualization-Agent Driver.event.103.message" value="The Agent Driver was unable to create the communication port to the Agent Service.%nReason: %1%nError code: 0x%2." />
+        <string id="Microsoft-User Experience Virtualization-Agent Driver.event.104.message" value="The Agent Driver was unable to validate the client session to the Agent Service.%nReason: %1%nError code: 0x%2" />
+        <string id="Microsoft-User Experience Virtualization-Agent Driver.event.105.message" value="The Agent Driver was unable to accept a port connection from the Agent Service.%nReason: %1" />
+        <string id="Microsoft-User Experience Virtualization-Agent Driver.event.106.message" value="The Agent Driver was unable to send a request to the Agent Service.%nReason: %1" />
+        <string id="Microsoft-User Experience Virtualization-Agent Driver.event.107.message" value="The Agent Driver was unable to initialize the communication port to the Agent Service.%nReason: %1%nError code: 0x%2" />
+        <string id="Microsoft-User Experience Virtualization-Agent Driver.event.108.message" value="The Agent Driver was unable to successfully handle a process start event. The program will start, but its settings (in the event that it has a matching settings location template) will not be synchronized.%nReason: %1" />
+        <string id="Microsoft-User Experience Virtualization-Agent Driver.event.109.message" value="The Agent Driver trapped the start of process %2 (ID %3)." />
+        <string id="Microsoft-User Experience Virtualization-Agent Driver.event.2.messa

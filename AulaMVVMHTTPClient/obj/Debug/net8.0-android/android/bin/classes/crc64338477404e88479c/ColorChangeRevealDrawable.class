@@ -1,0 +1,26 @@
+stgreSQL, use:
+ <pre>CREATE TABLE sessions2(
+ sesskey VARCHAR( 64 ) NOT NULL DEFAULT '',
+ expiry TIMESTAMP NOT NULL ,
+ expireref VARCHAR( 250 ) DEFAULT '',
+ created TIMESTAMP NOT NULL ,
+ modified TIMESTAMP NOT NULL ,
+ sessdata TEXT DEFAULT '',
+ PRIMARY KEY ( sesskey )
+ );
+</pre>
+ <pre>create INDEX sess2_expiry on sessions2( expiry );
+create INDEX sess2_expireref on sessions2 ( expireref );</pre>
+ <p>Here is the Oracle definition, which uses a CLOB for the SESSDATA field:
+ <pre>
+  <font
+ color="#004040">CREATE TABLE SESSIONS2<br>(<br>   SESSKEY    VARCHAR2(48 BYTE)                  NOT NULL,<br>   EXPIRY     DATE                               NOT NULL,<br>   EXPIREREF  VARCHAR2(200 BYTE),<br>   CREATED    DATE                               NOT NULL,<br>   MODIFIED   DATE                               NOT NULL,<br>   SESSDATA   CLOB,<br>  PRIMARY KEY(SESSKEY)<br>);
+<br>CREATE INDEX SESS2_EXPIRY ON SESSIONS2(EXPIRY);
+CREATE INDEX SESS2_EXPIREREF ON SESSIONS2(EXPIREREF);</font></pre>
+<p> We need to use a CLOB here because for text greater than 4000 bytes long,
+  Oracle requires you to use the CLOB data type. If you are using the oci8 driver,
+  ADOdb will automatically enable CLOB handling. So you can use either adodb-session2.php
+  or adodb-session-clob2.php - in this case it doesn't matter. <br>    
+<h2>Notifications</h2>
+<p>You can receive notification when your session is cleaned up by the session garbage collector or
+when you call session_

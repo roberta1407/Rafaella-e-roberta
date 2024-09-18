@@ -1,0 +1,30 @@
+ue="$(runtime.system32)\inetsrv\adsiis.dll" />
+      <registryValue name="ThreadingModel" valueType="REG_SZ" value="Both" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\CLSID\{FD2280A8-51A4-11D2-A601-3078302C2030}\ProgId">
+      <registryValue name="" valueType="REG_SZ" value="PropertyAttribute" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\Interface\{4B42E390-0E96-11D1-9C3F-00A0C922E703}">
+      <registryValue name="" valueType="REG_SZ" value="IISBaseObject" />
+      <securityDescriptor name="WRP_REGKEY_DEFAULT_SDDL" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\Interface\{4B42E390-0E96-11D1-9C3F-00A0C922E703}\ProxyStubClsid32">
+      <registryValue name="" valueType="REG_SZ" value="{00020424-0000-0000-C000-000000000046}" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\Interface\{4B42E390-0E96-11D1-9C3F-00A0C922E703}\TypeLib">
+      <registryValue name="" valueType="REG_SZ" value="{49D704A0-89F7-11D0-8527-00C04FD8D503}" />
+      <registryValue name="Version" valueType="REG_SZ" value="1.0" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\Interface\{50E21930-A247-11D1-B79C-00A0C922E703}">
+      <registryValue name="" valueType="REG_SZ" value="IISPropertyAttribute" />
+      <securityDescriptor name="WRP_REGKEY_DEFAULT_SDDL" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\Interface\{50E21930-A247-11D1-B79C-00A0C922E703}\ProxyStubClsid32">
+      <registryValue name="" valueType="REG_SZ" value="{00020424-0000-0000-C000-000000000046}" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\Interface\{50E21930-A247-11D1-B79C-00A0C922E703}\TypeLib">
+      <registryValue name="" valueType="REG_SZ" value="{49D704A0-89F7-11D0-8527-00C04FD8D503}" />
+      <registryValue name="Version" valueType="REG_SZ" value="1.0" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\Interface\{9036B027-A780-11D0-9B3D-0080C710EF95}">
+      <registryValue name="" val

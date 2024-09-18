@@ -1,0 +1,27 @@
+y>
+    <registryKey keyName="HKEY_CLASSES_ROOT\IIS\CLSID">
+      <registryValue name="" valueType="REG_SZ" value="{d88966de-89f2-11d0-8527-00c04fd8d503}" />
+      <securityDescriptor name="WRP_REGKEY_DEFAULT_SDDL" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\CLSID\{d88966de-89f2-11d0-8527-00c04fd8d503}">
+      <registryValue name="" valueType="REG_SZ" value="IIS Provider Object" />
+      <securityDescriptor name="WRP_REGKEY_DEFAULT_SDDL" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\CLSID\{d88966de-89f2-11d0-8527-00c04fd8d503}\InprocServer32">
+      <registryValue name="" valueType="REG_SZ" value="$(runtime.system32)\inetsrv\adsiis.dll" />
+      <registryValue name="ThreadingModel" valueType="REG_SZ" value="Both" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\CLSID\{d88966de-89f2-11d0-8527-00c04fd8d503}\ProgID">
+      <registryValue name="" valueType="REG_SZ" value="IIS" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\CLSID\{d88966de-89f2-11d0-8527-00c04fd8d503}\TypeLib">
+      <registryValue name="" valueType="REG_SZ" value="{49d704a0-89f7-11d0-8527-00c04fd8d503}" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\CLSID\{d88966de-89f2-11d0-8527-00c04fd8d503}\Version">
+      <registryValue name="" valueType="REG_SZ" value="1.0" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\Mimemap\CLSID">
+      <registryValue name="" valueType="REG_SZ" value="{9036b028-a780-11d0-9b3d-0080c710ef95}" />
+      <securityDescriptor name="WRP_REGKEY_DEFAULT_SDDL" />
+    </registryKey>
+ 

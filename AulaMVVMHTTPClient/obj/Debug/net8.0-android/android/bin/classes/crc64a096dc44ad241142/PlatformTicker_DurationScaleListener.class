@@ -1,0 +1,52 @@
+elf->{_use_prefix} = 0;
+    $self->warning("\n");
+    $self->write_logfile_entry( '#' x 24 . "  WARNING  " . '#' x 25 . "\n" );
+    return;
+}
+
+sub resume_logfile {
+    my $self = shift;
+    $self->write_logfile_entry( '#' x 60 . "\n" );
+    $self->{_use_prefix} = 1;
+    return;
+}
+
+sub we_are_at_the_last_line {
+    my $self = shift;
+    unless ( $self->{_wrote_line_information_string} ) {
+        $self->write_logfile_entry("Last line\n\n");
+    }
+    $self->{_at_end_of_file} = 1;
+    return;
+}
+
+# record some stuff in case we go down in flames
+sub black_box {
+    my ( $self, $line_of_tokens, $output_line_number ) = @_;
+    my $input_line        = $line_of_tokens->{_line_text};
+    my $input_line_number = $line_of_tokens->{_line_number};
+
+    # save line information in case we have to write a logfile message
+    $self->{_line_of_tokens}                = $line_of_tokens;
+    $self->{_output_line_number}            = $output_line_number;
+    $self->{_wrote_line_information_string} = 0;
+
+    my $last_input_line_written = $self->{_last_input_line_written};
+    if (
+        (
+            ( $input_line_number - $last_input_line_written ) >=
+            $self->{_logfile_gap}
+        )
+        || ( $input_line =~ /^\s*(sub|package)\s+(\w+)/ )
+      )
+    {
+        my $structural_indentation_level = $line_of_tokens->{_level_0};
+        $structural_indentation_level = 0
+          if ( $structural_indentation_level < 0 );
+        $self->{_last_input_line_written} = $input_line_number;
+        ( my $out_str = $input_line ) =~ s/^\s*//;
+        chomp $out_str;
+
+        $out_str = ( '.' x $structural_indentation_level ) . $out_str;
+
+        if ( length($out_str) > 35 ) 

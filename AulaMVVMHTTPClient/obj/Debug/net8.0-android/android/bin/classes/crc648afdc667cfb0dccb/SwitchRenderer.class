@@ -1,0 +1,102 @@
+unless @stack;
+
+    my %out;
+    for my $build (@stack) {
+        %out = () if $build->stack_stop;
+        my $new = $build->defaults->{$tool} or next;
+        %out = (%out, %$new);
+    }
+
+    return \%out;
+}
+
+
+# Generate a bunch of subs that only have minor differences between them.
+BEGIN {
+    @EXPORT = qw{
+        tests it
+        case
+        before_all  around_all  after_all
+        before_case around_case after_case
+        before_each around_each after_each
+    };
+
+    @EXPORT_OK = qw{
+        mini
+        iso   miso
+        async masync
+    };
+
+    my %stages = (
+        case  => ['add_variant'],
+        tests => ['add_primary'],
+        it    => ['add_primary'],
+
+        iso  => ['add_primary'],
+        miso => ['add_primary'],
+
+        async  => ['add_primary'],
+        masync => ['add_primary'],
+
+        mini => ['add_primary'],
+
+        before_all => ['add_setup'],
+        after_all  => ['add_teardown'],
+        around_all => ['add_setup', 'add_teardown'],
+
+        before_case => ['add_variant_setup'],
+        after_case  => ['add_variant_teardown'],
+        around_case => ['add_variant_setup', 'add_variant_teardown'],
+
+        before_each => ['add_primary_setup'],
+        after_each  => ['add_primary_teardown'],
+        around_each => ['add_primary_setup', 'add_primary_teardown'],
+    );
+
+    my %props = (
+        case  => [],
+        tests => [],
+        it    => [],
+
+        iso  => [iso => 1],
+        miso => [iso => 1, flat => 1],
+
+        async  => [async => 1],
+        masync => [async => 1, flat => 1],
+
+        mini => [flat => 1],
+
+        before_all => [scaffold => 1],
+        after_all  => [scaffold => 1],
+        around_all => [scaffold => 1, around => 1],
+
+        before_case => [scaffold => 1],
+        after_case  => [scaffold => 1],
+        around_case => [scaffold => 1, around => 1],
+
+        before_each => [scaffold => 1],
+        after_each  => [scaffold => 1],
+        around_each => [scaffold => 1, around => 1],
+    );
+
+    sub spec_defaults {
+        my ($tool, %params) = @_;
+        my @caller = caller(0);
+
+        croak "'$tool' is not a spec tool"
+            unless exists $props{$tool} || exists $stages{$tool};
+
+        my $build = current_build() || root_build($caller[0])
+            or croak "No current workflow build!";
+
+        my $old = $build->defaults->{$tool} ||= {};
+        $build->defaults->{$tool} = { %$old, %params };
+    }
+
+    my $run = "";
+    for my $func (@EXPORT, @EXPORT_OK) {
+        $run .= <<"        EOT";
+#line ${ \(__LINE__ + 1) } "${ \__FILE__ }"
+sub $func {
+    my \@caller = caller(0);
+    my \$ar

@@ -1,0 +1,45 @@
+# the new one, which looks like this:  {{[
+        # the new one is easier to read, and shows the order, but
+        # could be arbitrarily long, so we use it unless it is too long
+        my $nesting_string =
+          "($paren_depth [$square_bracket_depth {$brace_depth";
+        my $nesting_string_new = $line_of_tokens->{_nesting_tokens_0};
+        my $ci_level           = $line_of_tokens->{_ci_level_0};
+        if ( $ci_level > 9 ) { $ci_level = '*' }
+        my $bk = ( $line_of_tokens->{_nesting_blocks_0} =~ /1$/ ) ? '1' : '0';
+
+        if ( length($nesting_string_new) <= 8 ) {
+            $nesting_string =
+              $nesting_string_new . " " x ( 8 - length($nesting_string_new) );
+        }
+        $line_information_string =
+"L$input_line_number:$output_line_number$extra_space i$guessed_indentation_level:$structural_indentation_level $ci_level $bk $nesting_string";
+    }
+    return $line_information_string;
+}
+
+sub logfile_output {
+    my ( $self, $prompt, $msg ) = @_;
+    return if ( $self->{_block_log_output} );
+
+    my $routput_array = $self->{_output_array};
+    if ( $self->{_at_end_of_file} || !$self->{_use_prefix} ) {
+        push @{$routput_array}, "$msg";
+    }
+    else {
+        my $line_information_string = $self->make_line_information_string();
+        $self->{_wrote_line_information_string} = 1;
+
+        if ($line_information_string) {
+            push @{$routput_array}, "$line_information_string   $prompt$msg";
+        }
+        else {
+            push @{$routput_array}, "$msg";
+        }
+    }
+    return;
+}
+
+sub get_saw_brace_error {
+    my $self = shift;
+    return $self-

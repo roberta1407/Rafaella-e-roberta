@@ -1,0 +1,61 @@
+alanced >>>>>>.
+
+I<<<<<< Note that appendWellBalancedChunk() is only left for compatibility reasons >>>>>>. Implicitly it uses
+
+
+
+  my $fragment = $parser->parse_balanced_chunk( $chunk );
+   $node->appendChild( $fragment );
+
+This form is more explicit and makes it easier to control the flow of a script.
+
+
+=item appendText
+
+  $node->appendText( $PCDATA );
+
+alias for appendTextNode().
+
+
+=item appendTextNode
+
+  $node->appendTextNode( $PCDATA );
+
+This wrapper function lets you add a string directly to an element node.
+
+
+=item appendTextChild
+
+  $node->appendTextChild( $childname , $PCDATA );
+
+Somewhat similar with C<<<<<< appendTextNode >>>>>>: It lets you set an Element, that contains only a C<<<<<< text node >>>>>> directly by specifying the name and the text content.
+
+
+=item setNamespace
+
+  $node->setNamespace( $nsURI , $nsPrefix, $activate );
+
+setNamespace() allows one to apply a namespace to an element. The function
+takes three parameters: 1. the namespace URI, which is required and the two
+optional values prefix, which is the namespace prefix, as it should be used in
+child elements or attributes as well as the additional activate parameter. If
+prefix is not given, undefined or empty, this function tries to create a
+declaration of the default namespace.
+
+The activate parameter is most useful: If this parameter is set to FALSE (0), a
+new namespace declaration is simply added to the element while the element's
+namespace itself is not altered. Nevertheless, activate is set to TRUE (1) on
+default. In this case the namespace is used as the node's effective namespace.
+This means the namespace prefix is added to the node name and if there was a
+namespace already active for the node, it will be replaced (but its declaration
+is not removed from the document). A new namespace declaration is only created
+if necessary (that is, if the element is already in the scope of a namespace
+declaration associating the prefix with the namespace URI, then this
+declaration is reused).
+
+The following example may clarify this:
+
+
+
+  my $e1 = $doc->createElement("bar");
+   $e1->setNamespace("http://

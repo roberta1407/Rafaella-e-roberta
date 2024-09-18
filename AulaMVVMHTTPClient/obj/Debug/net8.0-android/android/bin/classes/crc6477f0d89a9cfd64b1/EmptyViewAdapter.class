@@ -1,0 +1,101 @@
+is reserved per RFC 3513 2.5.6.
+
+        """
+        return self in self._constants._sitelocal_network
+
+    @property
+    @functools.lru_cache()
+    def is_private(self):
+        """Test if this address is allocated for private networks.
+
+        Returns:
+            A boolean, True if the address is reserved per
+            iana-ipv6-special-registry, or is ipv4_mapped and is
+            reserved in the iana-ipv4-special-registry.
+
+        """
+        ipv4_mapped = self.ipv4_mapped
+        if ipv4_mapped is not None:
+            return ipv4_mapped.is_private
+        return any(self in net for net in self._constants._private_networks)
+
+    @property
+    def is_global(self):
+        """Test if this address is allocated for public networks.
+
+        Returns:
+            A boolean, true if the address is not reserved per
+            iana-ipv6-special-registry.
+
+        """
+        return not self.is_private
+
+    @property
+    def is_unspecified(self):
+        """Test if the address is unspecified.
+
+        Returns:
+            A boolean, True if this is the unspecified address as defined in
+            RFC 2373 2.5.2.
+
+        """
+        return self._ip == 0
+
+    @property
+    def is_loopback(self):
+        """Test if the address is a loopback address.
+
+        Returns:
+            A boolean, True if the address is a loopback address as defined in
+            RFC 2373 2.5.3.
+
+        """
+        return self._ip == 1
+
+    @property
+    def ipv4_mapped(self):
+        """Return the IPv4 mapped address.
+
+        Returns:
+            If the IPv6 address is a v4 mapped address, return the
+            IPv4 mapped address. Return None otherwise.
+
+        """
+        if (self._ip >> 32) != 0xFFFF:
+            return None
+        return IPv4Address(self._ip & 0xFFFFFFFF)
+
+    @property
+    def teredo(self):
+        """Tuple of embedded teredo IPs.
+
+        Returns:
+            Tuple of the (server, client) IPs or None if the address
+            doesn't appear to be a teredo address (doesn't start with
+            2001::/32)
+
+        """
+        if (self._ip >> 96) != 0x20010000:
+            return None
+        return (IPv4Address((self._ip >> 64) & 0xFFFFFFFF),
+                IPv4Address(~self._ip & 0xFFFFFFFF))
+
+    @property
+    def sixtofour(self):
+        """Return the IPv4 6to4 embedded address.
+
+        Returns:
+            The IPv4 6to4-embedded address if present or None if the
+            address doesn't appear to contain a 6to4 embedded address.
+
+        """
+        if (self._ip >> 112) != 0x2002:
+            return None
+        return IPv4Address((self._ip >> 80) & 0xFFFFFFFF)
+
+
+class IPv6Interface(IPv6Address):
+
+    def __init__(self, address):
+        addr, mask = self._split_addr_prefix(address)
+

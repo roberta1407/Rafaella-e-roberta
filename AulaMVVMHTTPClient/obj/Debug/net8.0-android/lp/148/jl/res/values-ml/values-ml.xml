@@ -1,0 +1,1 @@
+�案。",SHARE_FORMS_ERROR:"目前不支援傳送表格檔案。請前往「填寫和簽署」以尋找並下載表格。",SHARE_FORMS_ERROR_DESKTOP:"目前不支援此檔案類型，已從您的選項中省略。",SHARE_AV_FORMS_ERROR:"不支援傳送音效/視訊及表格檔案，已從您的選項中省略。",SHARE_OVER_LIMIT_APPEND_ERROR:"<br/><br/>此外，您已選定 <%- limit %> 個以上的檔案。超過上限的檔案已經省略。",SHARE_OVER_LIMIT_ERROR:"您已選定 <%- limit %> 個以上檔案。超過上限的檔案已經省略。",SHARE_OVER_LIMIT_TITLE:"過多檔案。",SHARE_NON_NATIVE_APPEND_ERROR:"<br/><br/>此外

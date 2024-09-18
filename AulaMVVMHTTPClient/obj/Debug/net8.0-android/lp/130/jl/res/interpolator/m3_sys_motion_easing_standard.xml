@@ -1,0 +1,11 @@
+erExecutorShellServiceHostProxy" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\CLSID\{41B87F43-0094-486B-BD50-8B47FD614BCE}\InProcServer32">
+      <registryValue name="" valueType="REG_SZ" value="$(runtime.system32)\AppContracts.dll" />
+      <registryValue name="ThreadingModel" valueType="REG_SZ" value="Both" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\CLSID\{6329947b-0b98-4bce-91e1-f90e7a84cd16}">
+      <securityDescriptor name="WRP_REGKEY_DEFAULT_SDDL" />
+      <registryValue name="" valueType="REG_SZ" value="AppServiceServiceComponent" />
+    </registryKey>
+    <registryKey keyName="HKEY_CLASSES_ROOT\CLSID\{6329947b-

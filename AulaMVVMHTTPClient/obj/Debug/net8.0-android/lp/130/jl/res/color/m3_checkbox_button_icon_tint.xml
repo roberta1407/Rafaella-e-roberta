@@ -1,0 +1,21 @@
+me="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>w1/9yRfRaQoOx4qab4ffLmn3cJW+/Itc3DTDy1+waPs=</dsig:DigestValue>
+    </asmv2:hash>
+  </file>
+  <file name="CredentialProviders.adml" destinationPath="$(runtime.windows)\PolicyDefinitions\zh-CN\" sourceName="CredentialProviders.adml" importPath="$(build.nttree)\loc\zh-cn\" sourcePath=".\">
+    <securityDescriptor name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>C+Tx7mripCXciU2ilthsZGw+pHuUCkZjulXGMJ4pJhk=</dsig:DigestValue>
+    </asmv2:hash>
+  </file>
+  <file name="EdgeUI.adml" destinationPath="$(runtime.windows)\PolicyDefinitions\zh-CN\" sourceName="EdgeUI.adml" importPath="$(build.nttree)\loc\zh-cn\" sourcePath=".\">
+    <securityDescriptor name="WRP_FILE_DEFAULT_SDDL" />

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v3" manifestVersion="1.0" copyright="Copyright (c) Microsoft Corporation. All Rights Reserved.">
+  <assemblyIdentity name="TSGenericUSBDriver.inf.Resources" version="10.0.19041.3636" processorArchitecture="amd64" language="da-DK" publicKeyToken="31bf3856ad364e35" versionScope="nonSxS" />
+  <file name="TsUsbGDCoInstaller.dll.mui" destinationPath="$(runtime.system32)\da-DK\" sourceName="TsUsbGDCoInstaller.dll.mui" importPath="$(build.nttree)\loc\da-dk\">
+    <securityDescriptor buildFilter="" name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rRnrbcrs8XuDUL8GyhgMU0+zSNhTH5CgPCYBUkftZ3A=</dsig:DigestValue>
+    </asmv2:hash>
+  </file>
+  <file name="TSGenericUSBDriver.inf_loc" destinationPath="$(runtime.system32)\driverstore\da-DK\" sourceName="TSGenericUSBDriver.inf_loc" importPath="$(build.nttree)\loc\da-dk\mui_infs\">
+    <securityDescriptor buildFilter="" name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>l5izd19r3WNxYMObpDsEUMSabM5892xwAB9/roIU+nA=</dsig:DigestValue>
+    </asmv2:hash>
+  </file>
+  <trustInfo>
+    <security>
+      <accessControl>
+        <securityDescriptorDefinitions>
+          <sec

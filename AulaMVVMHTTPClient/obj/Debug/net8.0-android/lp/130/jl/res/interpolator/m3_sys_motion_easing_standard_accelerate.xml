@@ -1,0 +1,9 @@
+nContractManager">
+      <securityDescriptor name="WRP_REGKEY_DEFAULT_SDDL" />
+      <registryValue name="TrustLevel" valueType="REG_DWORD" value="0x00000000" />
+      <registryValue name="ActivationType" valueType="REG_DWORD" value="0x00000000" />
+      <registryValue name="DllPath" valueType="REG_SZ" value="$(runtime.system32)\AppContracts.dll" />
+      <registryValue name="Threading" valueType="REG_DWORD" value="0x00000000" />
+    </registryKey>
+    <registryKey keyName="HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsRuntime\ActivatableClassId\Windows.ApplicationModel.Contracts.Internal.BackgroundContractOperationFactoryInterop">
+      <securityDescript

@@ -1,0 +1,23 @@
+ild.nttree)\loc\zh-cn\" sourcePath=".\">
+    <securityDescriptor name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>B9X1DSMVj8Sj2rNHf9plOk0qeYnNF4cUCell5tfMNWQ=</dsig:DigestValue>
+    </asmv2:hash>
+  </file>
+  <file name="SkyDrive.adml" destinationPath="$(runtime.windows)\PolicyDefinitions\zh-CN\" sourceName="SkyDrive.adml" importPath="$(build.nttree)\loc\zh-cn\" sourcePath=".\">
+    <securityDescriptor name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GqNH/5iB+2+zH64F4i3TiQC5e0vwti/ivGferRyL3mE=</dsig:DigestValue>
+    </asmv2:hash>
+  </file>
+  <file name="WirelessDisplay.adml" destinationPath="$(runtime.windows)\PolicyDefinitions\zh-CN\" sourceName="WirelessDisplay.adml" importPath="$(build.nttree)\loc\zh-cn\" sourcePath=".\">
+    <securityDescriptor name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-c

@@ -1,0 +1,22 @@
+NTED FROM tmp_threads;
+        DECLARE CONTINUE HANDLER FOR NOT FOUND SET v_done = TRUE;
+
+        SET v_done = FALSE;
+        OPEN c_threads;
+        c_threads_loop: LOOP
+            FETCH c_threads INTO v_thread_id, v_instrumented;
+            IF v_done THEN
+               LEAVE c_threads_loop;
+            END IF;
+
+            UPDATE performance_schema.threads
+               SET INSTRUMENTED = v_instrumented
+             WHERE THREAD_ID = v_thread_id;
+        END LOOP;
+        CLOSE c_threads;
+    END;
+
+    UPDATE performance_schema.threads
+       SET INSTRUMENTED = IF(PROCESSLIST_USER IS NOT NULL,
+                             sys.ps_is_account_enabled(PROCESSLIST_HOST, PROCESSLIST_USER),
+                  

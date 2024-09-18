@@ -1,0 +1,13 @@
+me="kd_02_1969.dll" destinationPath="$(runtime.system32)\" sourceName="kd_02_1969.dll" importPath="$(build.nttree)\" sourcePath=".\">
+    <link destination="$(runtime.windows)\Boot\EFI\kd_02_1969.dll" />
+    <securityDescriptor name="WRP_FILE_DEFAULT_SDDL" />
+    <asmv2:hash xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Xnzro5q1K73006RlDfCxSWwkaQWWtZjMgaAnaYHBWA4=</dsig:DigestValue>
+    </asmv2:hash>
+  </file>
+  <file name="kd_02_10df.dll" destinationPath="$(runtime.system32)\" sourceName="kd_02_10df.dll" importPath="$(build.nttree)\" sourcePath=".\">
+    <link destination="$(runtime.windows)\Boot\E

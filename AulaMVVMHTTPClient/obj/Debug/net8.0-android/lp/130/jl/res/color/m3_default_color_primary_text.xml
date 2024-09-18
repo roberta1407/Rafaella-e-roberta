@@ -1,0 +1,13 @@
+5" />
+      <registryValue name="Service" valueType="REG_SZ" value="" />
+      <securityDescriptor name="62791918C58049A69FA4D51EF72F68381DD90E4C" />
+    </registryKey>
+    <registryKey keyName="HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\wfcvsc.inf_amd64_672ad784f639cfd0\Descriptors\VMBUS\{2f9bcc4a-0069-4af3-b76b-6fd0be528cda}">
+      <registryValue name="Configuration" valueType="REG_SZ" value="fcvscDriveInstall_NULL" />
+      <registryValue name="Description" valueType="REG_SZ" value="%devicedesc_null%" />
+      <registryValue name="Manufacturer" valueType="REG_SZ" value="%stdmfg%" />
+      <securityDescriptor name="62791918C58049A69FA4D51EF72F68381DD90E4C" />
+    </registryKey>
+    <registryKey keyName="HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\wfcvsc.inf_amd64_672ad784f639cfd0\Strings">
+      <registryValue name="devicedesc_null" valueType="REG_SZ" value="Microsoft Hyper-V Fibre Channel HBA (not supported)" />
+      <registryValue name="stdmfg" valueType="REG_SZ" value="Microsoft" />

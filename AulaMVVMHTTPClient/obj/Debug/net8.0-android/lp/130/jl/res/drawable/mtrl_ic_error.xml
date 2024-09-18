@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v3" manifestVersion="1.0" copyright="Copyright (c) Microsoft Corporation. All Rights Reserved.">
+  <assemblyIdentity name="Microsoft-UtilityVM-Core-Package" version="10.0.19041.4522" processorArchitecture="amd64" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" />
+  <package identifier="Microsoft-UtilityVM-Core" releaseType="Feature Pack">
+    <update name="8ee0b2ad4411536e6a32b05b4223401e">
+      <package contained="false" integrate="hidden">
+        <assemblyIdentity name="Microsoft-UtilityVM-Core-merged-Package" version="10.0.19041.4474" processorArchitecture="amd64" language="neutral" buildType="release" publicKeyToken="31bf3856ad364e35" />
+      </package>
+    </update>
+    <update name="a16185ca45a3bd243d3ed1f1c7e704dc">
+      <package contained="false" integrate="hidden">
+        <assemblyIdentity name="HyperV-Guest-CrashDump-Package" version="10.0.19041.3636" processorArchitecture="amd64" language="neutral" buildType="release" publicKeyToken="31bf3856ad
